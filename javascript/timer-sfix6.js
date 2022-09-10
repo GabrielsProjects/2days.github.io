@@ -85,94 +85,9 @@ function countdown(targettime, reset) {
     }, 1000);
 }
 function doMinuteTimer() {
-        countdown(172800, true);
+        countdown(2880, true);
 }
-function removeUnderline(linknumber) {
-    var linkArray = [];
-    var i;
-    linkArray[0] = "lsmall";
-    linkArray[1] = "lmedium";
-    linkArray[2] = "llarge";
-    linkArray[3] = "lxlarge";
-    for (i = 0; i < 4; i++) {
-        if (i == linknumber) {
-            document.getElementById(linkArray[i]).style.textDecoration = "none";
-            document.getElementById(linkArray[i]).style.fontWeight = "normal";
-        } else {
-            document.getElementById(linkArray[i]).style.textDecoration = "underline";
-            document.getElementById(linkArray[i]).style.fontWeight = "bold";
-        }
-    }
-}
-function removeUnderline2(linknumber) {
-    var linkArray2 = [];
-    linkArray2[4] = "l_city";
-    linkArray2[5] = "l_black";
-    linkArray2[6] = "l_space";
-    linkArray2[7] = "l_woods";
-    linkArray2[8] = "l_ocean";
-    linkArray2[9] = "l_snow";
-    linkArray2[10] = "l_blue";
-    linkArray2[11] = "l_silver";
-    linkArray2[12] = "l_green";
-    linkArray2[13] = "l_orange";
-    linkArray2[14] = "l_violet";
-    linkArray2[15] = "l_tan";
-    linkArray2[16] = "l_clouds";
-    linkArray2[17] = "l_factory";
-    linkArray2[18] = "l_leather";
-    linkArray2[19] = "l_panel";
-    for (i = 4; i < 20; i++) {
-        if (i == linknumber) {
-            document.getElementById(linkArray2[i]).style.textDecoration = "none";
-            document.getElementById(linkArray2[i]).style.fontWeight = "normal";
-        } else {
-            document.getElementById(linkArray2[i]).style.textDecoration = "underline";
-            document.getElementById(linkArray2[i]).style.fontWeight = "bold";
-        }
-    }
-}
-function changeImageSize(theWidthVar, theSizeName, theLinkNumber) {
-    var thatWidth = Math.floor(document.body.clientWidth);
-    var mediumTimerSize = Math.floor(thatWidth / 16);
-    var mediumTimerSizeA = mediumTimerSize + "px";
-    var mediumTimerSizeB = Math.floor(mediumTimerSize / 2) + "px";
-    if (theWidthVar === "medium") {
-        document.getElementById("h").style.width = mediumTimerSizeA;
-        document.getElementById("i").style.width = mediumTimerSizeA;
-        document.getElementById("k").style.width = mediumTimerSizeA;
-        document.getElementById("l").style.width = mediumTimerSizeA;
-        document.getElementById("j").style.width = mediumTimerSizeB;
-        setTimerSizeCookie("medium");
-        setTimerSizeNameCookie("medium");
-        removeUnderline(1);
-    } else {
-        var changedTimerSize = Math.floor(thatWidth / (theWidthVar));
-        var changedTimerSizeA = changedTimerSize + "px";
-        var changedTimerSizeB = Math.floor(changedTimerSize / 2) + "px";
-        document.getElementById("h").style.width = changedTimerSizeA;
-        document.getElementById("i").style.width = changedTimerSizeA;
-        document.getElementById("k").style.width = changedTimerSizeA;
-        document.getElementById("l").style.width = changedTimerSizeA;
-        document.getElementById("j").style.width = changedTimerSizeB;
-        setTimerSizeCookie(theWidthVar);
-        setTimerSizeNameCookie(theSizeName);
-        if (theLinkNumber !== "") {
-            removeUnderline(theLinkNumber);
-        } else if (theSizeName == "small") {
-            removeUnderline(0);
-        } else if (theSizeName == "large") {
-            removeUnderline(2);
-        } else if (theSizeName == "x-large") {
-            removeUnderline(3);
-        }
-    }
-    document.getElementById("h").style.height = "auto";
-    document.getElementById("i").style.height = "auto";
-    document.getElementById("k").style.height = "auto";
-    document.getElementById("l").style.height = "auto";
-    document.getElementById("j").style.height = "auto";
-}
+
 function loopThroughClass(className, newValue) {
     var elements = document.getElementsByClassName(className);
     for (var i = 0; i < elements.length; i++) {
