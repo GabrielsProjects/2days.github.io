@@ -56,17 +56,20 @@
             <tr id="timerDiv">
                 <td align="center" valign="middle" width="100%" height="100%">
                     <div id="countdownDisp">
-                            <img height="100" src="/numerals/c0.webp" width="72" name="h" id="h" alt="Timer Minutes" border="0" class="numeral_IMG">
-                            <img height="100" src="/numerals/c0.webp" width="72" name="i" id="i" alt="Timer Minutes" border="0" class="numeral_IMG">
+                            <img height="100" src="/numerals/c0.webp" width="72" name="h" id="h" alt="Timer Hours" border="0" class="numeral_IMG">
+                            <img height="100" src="/numerals/c0.webp" width="72" name="i" id="i" alt="Timer Hours" border="0" class="numeral_IMG">
                             <img height="100" src="/numerals/colon.webp" width="36" name="j" id="j" alt=":" border="0" class="numeral_IMG">
-                            <img height="100" src="/numerals/c0.webp" width="72" name="k" id="k" alt="Timer Seconds" border="0" class="numeral_IMG">
-                            <img height="100" src="/numerals/c0.webp" width="72" name="l" id="l" alt="Timer Seconds" border="0" class="numeral_IMG">
+                            <img height="100" src="/numerals/c0.webp" width="72" name="k" id="k" alt="Timer Minutes" border="0" class="numeral_IMG">
+                            <img height="100" src="/numerals/c0.webp" width="72" name="l" id="l" alt="Timer Minutes" border="0" class="numeral_IMG">
+                            <img height="100" src="/numerals/colon.webp" width="36" name="m" id="m" alt=":" border="0" class="numeral_IMG">
+                            <img height="100" src="/numerals/c0.webp" width="72" name="n" id="n" alt="Timer Seconds" border="0" class="numeral_IMG">
+                            <img height="100" src="/numerals/c0.webp" width="72" name="o" id="o" alt="Timer Seconds" border="0" class="numeral_IMG">
                     </div>
                 </td>
             </tr>
         </table>
         <script type="text/javascript">
-            window.onload = doMinuteTimer();
+            window.onload = countdown(2880, true);
         </script>
     </BODY>
 </HTML>
