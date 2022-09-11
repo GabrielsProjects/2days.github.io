@@ -59,11 +59,11 @@ function countdown(targettime, reset) {
     if (reset == true)
         clearInterval(timer);
     timer = setInterval(function() {
-        hourfield = Math.floor(targettime / 60);
-        minutefield = (targettime % 60 < 10 ? "0" : "") + targettime % 60;
-        minutefieldForDisplay = targettime % 60;
-        secondfield = (targettime % 60 < 10 ? "0" : "") + targettime % 60;
-        secondfieldForDisplay = targettime % 60;
+        hourfield = Math.floor(targettime / 60); //48
+        minutefield = (targettime % 60 < 10 ? "0" : "") + targettime % 60;  //48
+        minutefieldForDisplay = targettime % 60; //48
+        secondfield = (targettime % 60 < 10 ? "0" : "") + targettime % 60; //48
+        secondfieldForDisplay = targettime % 60; //48
         if (hourfield <= 9) {
             document.images.h.src = c0.src;
             document.images.i.src = eval("c" + hourfield + ".src");
@@ -72,14 +72,14 @@ function countdown(targettime, reset) {
             document.images.i.src = eval("c" + (hourfield % 10) + ".src");
         }
         if (minutefield <= 9) {
-            document.k.src = c0.src;
+            document.images.k.src = c0.src;
             document.images.l.src = eval("c" + minutefieldForDisplay + ".src");
         } else {
             document.images.k.src = eval("c" + Math.floor(minutefieldForDisplay / 10) + ".src");
             document.images.l.src = eval("c" + (minutefieldForDisplay % 10) + ".src");
         }
         if (secondfield <= 9) {
-            document.n.src = c0.src;
+            document.images.n.src = c0.src;
             document.images.o.src = eval("c" + secondfieldForDisplay + ".src");
         } else {
             document.images.n.src = eval("c" + Math.floor(secondfieldForDisplay / 10) + ".src");
