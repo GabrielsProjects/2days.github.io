@@ -62,8 +62,8 @@ function countdown(targettime, reset) {
         hourfield = Math.floor(targettime / 60); //48
         minutefield = (targettime % 60 < 10 ? "0" : "") + targettime % 60;  //48
         minutefieldForDisplay = targettime % 60; //48
-        secondfield = (targettime % 60 < 10 ? "0" : "") + targettime % 60; //48
-        secondfieldForDisplay = targettime % 60; //48
+        secondfield = (targettime % 600 < 10 ? "0" : "") + targettime % 600; //48
+        secondfieldForDisplay = targettime % 600; //48
         if (hourfield <= 9) {
             document.images.h.src = c0.src;
             document.images.i.src = eval("c" + hourfield + ".src");
