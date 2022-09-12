@@ -49,7 +49,7 @@ c9.src = "/numerals/c9.webp";
 var c0 = new Image();
 c0.src = "/numerals/c0.webp";
 var cb = new Image();
-cb.src = "/numerals/cb.webp";
+cb.src = "/numerals/colon.webp";
 var onePix = new Image();
 onePix.src = "/numerals/clear.webp";
 
@@ -71,14 +71,14 @@ function countdown(targettime, reset) {
             document.images.i.src = eval("c" + (hourfield % 10) + ".src");
         }
         if (minutefield <= 9) {
-            document.k.src = c0.src;
+            document.images.k.src = c0.src;
             document.images.l.src = eval("c" + minutefield + ".src");
         } else {
             document.images.k.src = eval("c" + Math.floor(minutefield / 10) + ".src");
             document.images.l.src = eval("c" + (minutefield % 10) + ".src");
         }
         if (secondfield <= 9) {
-            document.images.n.src = c0.src;
+            document.n.src = c0.src;
             document.images.o.src = eval("c" + secondfieldForDisplay + ".src");
         } else {
             document.images.n.src = eval("c" + Math.floor(secondfieldForDisplay / 10) + ".src");
@@ -87,21 +87,7 @@ function countdown(targettime, reset) {
         timeRemaining = targettime;
         isPaused = 0;
         if (--targettime < 0) {
-            clearInterval(timer);
-            return playAlarm();
+            //Something
         }
     }, 1000);
-}
-
-function loopThroughClass(className, newValue) {
-    var elements = document.getElementsByClassName(className);
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].style.color = newValue;
-    }
-}
-function loopThroughClass2(className, newValue) {
-    var elements = document.getElementsByClassName(className);
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].style.filter = newValue;
-    }
 }
