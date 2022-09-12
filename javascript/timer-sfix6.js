@@ -61,7 +61,6 @@ function countdown(targettime, reset) {
     timer = setInterval(function() {
         hourfield = Math.floor(targettime / 60); //48
         minutefield = (targettime % 60 < 10 ? "0" : "") + targettime % 60;  //0
-        minutefieldForDisplay = targettime % 60; //0
         secondfield = (targettime % 60 < 10 ? "0" : "") + targettime % 60; //0
         secondfieldForDisplay = targettime % 60; //0
         if (hourfield <= 9) {
@@ -73,10 +72,10 @@ function countdown(targettime, reset) {
         }
         if (minutefield <= 9) {
             document.images.k.src = c0.src;
-            document.images.l.src = eval("c" + minutefieldForDisplay + ".src");
+            document.images.l.src = eval("c" + minutefield + ".src");
         } else {
-            document.images.k.src = eval("c" + Math.floor(minutefieldForDisplay / 10) + ".src");
-            document.images.l.src = eval("c" + (minutefieldForDisplay % 10) + ".src");
+            document.images.k.src = eval("c" + Math.floor(minutefield / 10) + ".src");
+            document.images.l.src = eval("c" + (minutefield % 10) + ".src");
         }
         if (secondfield <= 9) {
             document.images.n.src = c0.src;
