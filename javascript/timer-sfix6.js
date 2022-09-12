@@ -48,8 +48,8 @@ var c9 = new Image();
 c9.src = "/numerals/c9.webp";
 var c0 = new Image();
 c0.src = "/numerals/c0.webp";
-var cb = new Image();
-cb.src = "/numerals/colon.webp";
+var colon = new Image();
+colon.src = "/numerals/colon.webp";
 var onePix = new Image();
 onePix.src = "/numerals/clear.webp";
 
@@ -87,7 +87,7 @@ function countdown(targettime, reset) {
         timeRemaining = targettime;
         isPaused = 0;
         if (--targettime < 0) {
-            //Something
+            print(targetime)
         }
     }, 1000);
 }
