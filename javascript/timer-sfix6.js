@@ -55,14 +55,15 @@ var isPaused = 0;
 
 var timeRemaining;
 var timer;
+//targettime = 172799 OR 47hours 59mins 59seconds 
 function countdown(targettime, reset) {
     if (reset == true)
         clearInterval(timer);
     timer = setInterval(function() {
-        hourfield = Math.floor(targettime / 60);
-        minutefield = targettime % 60;
+        hourfield = Math.floor(targettime / 3600); //47
+        minutefield = Math.floor((targettime % 600) / 10); //59
         secondfield = (targettime % 60 < 10 ? "0" : "") + targettime % 60;
-        secondfieldForDisplay = targettime % 60;
+        secondfieldForDisplay = targettime % 60; //59
         if (hourfield <= 9) {
             document.images.h.src = c0.src;
             document.images.i.src = eval("c" + hourfield + ".src");
