@@ -61,7 +61,7 @@ function countdown(targettime, reset) {
         clearInterval(timer);
     timer = setInterval(function() {
         hourfield = Math.floor(targettime / 3600); //47
-        minutefield = Math.floor((targettime % 600) / 10); //59
+        minutefield = Math.floor((targettime / 290) /10); //59
         secondfield = (targettime % 60 < 10 ? "0" : "") + targettime % 60;
         secondfieldForDisplay = targettime % 60; //59
         if (hourfield <= 9) {
